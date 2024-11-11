@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5.9-api-request</title>
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+
+  <body class="bg-slate-50 font-mono">
+    <div class="align-elements text-center">
+      <h1 class="text-5xl my-10 font-semibold font-mono text-slate-500">
+        Find country
+      </h1>
+      <form class="w-96 my-10 mx-auto flex gap-5">
+        <input
+          type="text"
+          placeholder="Type here..."
+          class="input input-bordered w-full max-w-xs"
+          id="search"
+        />
+        <button class="btn btn-neutral search-btn">Search</button>
+      </form>
+    </div>
+
+    <template id="country-template">
+      <div
+        class="card bg-base-100 shadow-xl p-5 text-center max-w-xs mx-auto mt-10"
+      >
+        <img
+          id="country-flag"
+          src=""
+          alt="Country flag"
+          class="w-36 h-24 mx-auto"
+        />
+
+        <div class="card-body">
+          <h2 id="country-name" class="card-title text-2xl font-bold">
+            Country Name
+          </h2>
+          <p class="text-lg">
+            Capital:
+            <span id="country-capital" class="font-medium">Capital City</span>
+          </p>
+          <p class="text-lg">
+            Population:
+            <span id="country-population" class="font-medium">Population</span>
+          </p>
+          <p class="text-lg">
+            Borders:
+            <span id="country-borders" class="font-medium">Borders</span>
+          </p>
+          <p class="text-lg">
+            Continents:
+            <span id="country-continent" class="font-medium">Continents:</span>
+          </p>
+        </div>
+      </div>
+    </template>
+
+    <div id="container"></div>
+
+    <!-- JavaScript -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>
